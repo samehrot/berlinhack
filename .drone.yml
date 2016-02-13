@@ -1,0 +1,38 @@
+image: shippedrepos-docker-shipped-java-build.bintray.io/shipped-java-build:3c7761570d38
+git:
+  path: github.com/samehrot/berlinhack
+script:
+  - echo "build commands"
+  - .shipped/build
+  - .shipped/test
+clone:
+  path: github.com/samehrot/berlinhack
+build:
+  image: shippedrepos-docker-shipped-java-build.bintray.io/shipped-java-build:3c7761570d38
+  commands:
+    - echo "build commands"
+    - .shipped/build
+    - .shipped/test
+publish:
+  docker:
+    dockerfile: ./Dockerfile
+    docker_version: 1.4.1
+    registry_login_url: $$bintray_repo_login_url
+    registry_login: true
+    username: $$bintray_user
+    password: $$bintray_api_key
+    email: $$bintray_user_email
+    image_name: $$bintray_image_name
+    push_latest: true
+    tag: $$COMMIT
+    
+
+    registry: $$bintray_registry
+    repo: $$bintray_repo
+notify:
+  webhook:
+    image: shippedrepos-docker-drone.bintray.io/drone-webhook
+    urls:
+      - "https://api.ciscoshipped.io/webhooks/drone"
+    on_success: true
+    on_failure: true
