@@ -11,6 +11,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 public class Publish {
 	
+	// To send message to relayr
 	
 	   public static void main(String args) {
 
