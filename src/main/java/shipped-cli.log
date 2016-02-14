@@ -1,0 +1,59 @@
+TRACE 2016/02/13 22:16:53.059958 config.go:100: .shipped directory already exists
+TRACE 2016/02/13 22:16:53.062884 config.go:109: Config file .shipped/shipped.ini already exists in C:\Users\gur40174
+TRACE 2016/02/13 22:16:53.062884 config.go:139: Using config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:16:53.064845 main.go:172: CLI start directory is C:\Users\gur40174\berlin\aricentiot\berlinhack
+TRACE 2016/02/13 22:16:53.064845 config.go:139: Using config file C:\Users\gur40174\berlin\aricentiot\berlinhack\.shipped\shipped.ini
+TRACE 2016/02/13 22:16:53.065824 config.go:148: Also using project config file C:\Users\gur40174\berlin\aricentiot\.shipped\shipped.ini
+TRACE 2016/02/13 22:16:53.066801 config.go:158: Also using home config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:16:53.104965 utils.go:98: Console width is 80; help width is 79
+TRACE 2016/02/13 22:16:53.104965 main.go:137: Shipped-cli 1.0 b118 20160212 232232 starting with args struct { BootLogfile string; ConfigFile string; ConsoleMode bool; Debug bool; Expanded bool; FastBootstrap bool; Force bool; Full bool; Help bool; Json bool; Latest bool; LocalDocker bool; Logfile string; MockSDKClient bool; OutputFields string; RunAsRootOK bool; ShippedHome string; ShowVersion bool; Server string; Token string; VM string; VMisVagrant bool; VMisDockerCompose bool; ObjType string; Command string; Arguments []string }{BootLogfile:"", ConfigFile:"", ConsoleMode:false, Debug:false, Expanded:true, FastBootstrap:false, Force:false, Full:false, Help:false, Json:false, Latest:false, LocalDocker:false, Logfile:"C:\\Users\\gur40174\\berlin\\aricentiot\\berlinhack\\src\\main\\java\\shipped-cli.log", MockSDKClient:false, OutputFields:"", RunAsRootOK:false, ShippedHome:"", ShowVersion:false, Server:"https://api.ciscoshipped.io", Token:"uWjTGwlfDOtbuiPuDiQchTtljDPHutrb", VM:"", VMisVagrant:true, VMisDockerCompose:false, ObjType:"pr", Command:"get", Arguments:[]string(nil)}
+TRACE 2016/02/13 22:16:53.104965 commands.go:92: Running command(pr) subcommand(get) args([]string(nil)) help(false)
+TRACE 2016/02/13 22:16:53.104965 commands.go:160: objDesc.Name = "Projects"
+TRACE 2016/02/13 22:16:53.108879 uuidParser.go:196: ==> Using projectId 3c4388fb-c825-11e5-b224-0242ac11011b
+TRACE 2016/02/13 22:16:53.108879 projects.go:164: Starting ProjectService.Get()
+TRACE 2016/02/13 22:16:53.108879 client.go:114: GET https://api.ciscoshipped.io/projects/3c4388fb-c825-11e5-b224-0242ac11011b?api_token=uWjTGwlfDOtbuiPuDiQchTtljDPHutrb
+TRACE 2016/02/13 22:16:53.397335 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/02/13 22:17:00.873637 config.go:100: .shipped directory already exists
+TRACE 2016/02/13 22:17:00.875593 config.go:109: Config file .shipped/shipped.ini already exists in C:\Users\gur40174
+TRACE 2016/02/13 22:17:00.876543 config.go:139: Using config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:17:00.877526 main.go:172: CLI start directory is C:\Users\gur40174\berlin\aricentiot\berlinhack
+TRACE 2016/02/13 22:17:00.878503 config.go:139: Using config file C:\Users\gur40174\berlin\aricentiot\berlinhack\.shipped\shipped.ini
+TRACE 2016/02/13 22:17:00.878503 config.go:148: Also using project config file C:\Users\gur40174\berlin\aricentiot\.shipped\shipped.ini
+TRACE 2016/02/13 22:17:00.879480 config.go:158: Also using home config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:17:00.923495 utils.go:98: Console width is 80; help width is 79
+TRACE 2016/02/13 22:17:00.923495 main.go:137: Shipped-cli 1.0 b118 20160212 232232 starting with args struct { BootLogfile string; ConfigFile string; ConsoleMode bool; Debug bool; Expanded bool; FastBootstrap bool; Force bool; Full bool; Help bool; Json bool; Latest bool; LocalDocker bool; Logfile string; MockSDKClient bool; OutputFields string; RunAsRootOK bool; ShippedHome string; ShowVersion bool; Server string; Token string; VM string; VMisVagrant bool; VMisDockerCompose bool; ObjType string; Command string; Arguments []string }{BootLogfile:"", ConfigFile:"", ConsoleMode:false, Debug:false, Expanded:true, FastBootstrap:false, Force:false, Full:false, Help:false, Json:false, Latest:false, LocalDocker:false, Logfile:"C:\\Users\\gur40174\\berlin\\aricentiot\\berlinhack\\src\\main\\java\\shipped-cli.log", MockSDKClient:false, OutputFields:"", RunAsRootOK:false, ShippedHome:"", ShowVersion:false, Server:"https://api.ciscoshipped.io", Token:"uWjTGwlfDOtbuiPuDiQchTtljDPHutrb", VM:"", VMisVagrant:true, VMisDockerCompose:false, ObjType:"env", Command:"get", Arguments:[]string(nil)}
+TRACE 2016/02/13 22:17:00.923495 commands.go:92: Running command(env) subcommand(get) args([]string(nil)) help(false)
+TRACE 2016/02/13 22:17:00.923495 commands.go:160: objDesc.Name = "Environments"
+TRACE 2016/02/13 22:17:00.926428 uuidParser.go:196: ==> Using projectId 3c4388fb-c825-11e5-b224-0242ac11011b
+TRACE 2016/02/13 22:17:00.926428 environments.go:133: Starting EnvironmentService.Get()
+TRACE 2016/02/13 22:17:00.927407 client.go:114: GET https://api.ciscoshipped.io/projects/3c4388fb-c825-11e5-b224-0242ac11011b/envs?api_token=uWjTGwlfDOtbuiPuDiQchTtljDPHutrb
+TRACE 2016/02/13 22:17:01.203464 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/02/13 22:26:13.257142 config.go:100: .shipped directory already exists
+TRACE 2016/02/13 22:26:13.259096 config.go:109: Config file .shipped/shipped.ini already exists in C:\Users\gur40174
+TRACE 2016/02/13 22:26:13.260074 config.go:139: Using config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:26:13.261051 main.go:172: CLI start directory is C:\Users\gur40174\berlin\aricentiot\berlinhack
+TRACE 2016/02/13 22:26:13.262029 config.go:139: Using config file C:\Users\gur40174\berlin\aricentiot\berlinhack\.shipped\shipped.ini
+TRACE 2016/02/13 22:26:13.262029 config.go:148: Also using project config file C:\Users\gur40174\berlin\aricentiot\.shipped\shipped.ini
+TRACE 2016/02/13 22:26:13.263007 config.go:158: Also using home config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:26:13.301219 utils.go:98: Console width is 80; help width is 79
+TRACE 2016/02/13 22:26:13.301219 main.go:137: Shipped-cli 1.0 b118 20160212 232232 starting with args struct { BootLogfile string; ConfigFile string; ConsoleMode bool; Debug bool; Expanded bool; FastBootstrap bool; Force bool; Full bool; Help bool; Json bool; Latest bool; LocalDocker bool; Logfile string; MockSDKClient bool; OutputFields string; RunAsRootOK bool; ShippedHome string; ShowVersion bool; Server string; Token string; VM string; VMisVagrant bool; VMisDockerCompose bool; ObjType string; Command string; Arguments []string }{BootLogfile:"", ConfigFile:"", ConsoleMode:false, Debug:false, Expanded:true, FastBootstrap:false, Force:false, Full:false, Help:false, Json:false, Latest:false, LocalDocker:false, Logfile:"C:\\Users\\gur40174\\berlin\\aricentiot\\berlinhack\\src\\main\\java\\shipped-cli.log", MockSDKClient:false, OutputFields:"", RunAsRootOK:false, ShippedHome:"", ShowVersion:false, Server:"https://api.ciscoshipped.io", Token:"uWjTGwlfDOtbuiPuDiQchTtljDPHutrb", VM:"", VMisVagrant:true, VMisDockerCompose:false, ObjType:"env", Command:"get", Arguments:[]string(nil)}
+TRACE 2016/02/13 22:26:13.301219 commands.go:92: Running command(env) subcommand(get) args([]string(nil)) help(false)
+TRACE 2016/02/13 22:26:13.301219 commands.go:160: objDesc.Name = "Environments"
+TRACE 2016/02/13 22:26:13.301219 uuidParser.go:196: ==> Using projectId 3c4388fb-c825-11e5-b224-0242ac11011b
+TRACE 2016/02/13 22:26:13.301219 environments.go:133: Starting EnvironmentService.Get()
+TRACE 2016/02/13 22:26:13.301219 client.go:114: GET https://api.ciscoshipped.io/projects/3c4388fb-c825-11e5-b224-0242ac11011b/envs?api_token=uWjTGwlfDOtbuiPuDiQchTtljDPHutrb
+TRACE 2016/02/13 22:26:13.561769 client.go:159: Request status code 200 (200 OK)
+TRACE 2016/02/13 22:27:22.382190 config.go:100: .shipped directory already exists
+TRACE 2016/02/13 22:27:22.385123 config.go:109: Config file .shipped/shipped.ini already exists in C:\Users\gur40174
+TRACE 2016/02/13 22:27:22.386100 config.go:139: Using config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:27:22.387078 main.go:172: CLI start directory is C:\Users\gur40174\berlin\aricentiot\berlinhack
+TRACE 2016/02/13 22:27:22.388056 config.go:139: Using config file C:\Users\gur40174\berlin\aricentiot\berlinhack\.shipped\shipped.ini
+TRACE 2016/02/13 22:27:22.389033 config.go:148: Also using project config file C:\Users\gur40174\berlin\aricentiot\.shipped\shipped.ini
+TRACE 2016/02/13 22:27:22.389033 config.go:158: Also using home config file C:\Users\gur40174\.shipped\shipped.ini
+TRACE 2016/02/13 22:27:22.427584 utils.go:98: Console width is 80; help width is 79
+TRACE 2016/02/13 22:27:22.427584 main.go:137: Shipped-cli 1.0 b118 20160212 232232 starting with args struct { BootLogfile string; ConfigFile string; ConsoleMode bool; Debug bool; Expanded bool; FastBootstrap bool; Force bool; Full bool; Help bool; Json bool; Latest bool; LocalDocker bool; Logfile string; MockSDKClient bool; OutputFields string; RunAsRootOK bool; ShippedHome string; ShowVersion bool; Server string; Token string; VM string; VMisVagrant bool; VMisDockerCompose bool; ObjType string; Command string; Arguments []string }{BootLogfile:"", ConfigFile:"", ConsoleMode:false, Debug:false, Expanded:true, FastBootstrap:false, Force:false, Full:false, Help:false, Json:false, Latest:false, LocalDocker:false, Logfile:"C:\\Users\\gur40174\\berlin\\aricentiot\\berlinhack\\src\\main\\java\\shipped-cli.log", MockSDKClient:false, OutputFields:"", RunAsRootOK:false, ShippedHome:"", ShowVersion:false, Server:"https://api.ciscoshipped.io", Token:"uWjTGwlfDOtbuiPuDiQchTtljDPHutrb", VM:"", VMisVagrant:true, VMisDockerCompose:false, ObjType:"rlse", Command:"get", Arguments:[]string{"3c4388fb-c825-11e5-b224-0242ac11011b", "e6e9e862-ce93-11e5-a821-0242ac11111a"}}
+TRACE 2016/02/13 22:27:22.427584 commands.go:92: Running command(rlse) subcommand(get) args([]string{"3c4388fb-c825-11e5-b224-0242ac11011b", "e6e9e862-ce93-11e5-a821-0242ac11111a"}) help(false)
+TRACE 2016/02/13 22:27:22.427584 commands.go:160: objDesc.Name = "Releases"
+TRACE 2016/02/13 22:27:22.428520 releases.go:177: Starting ServiceService.Get()
+TRACE 2016/02/13 22:27:22.428520 client.go:114: GET https://api.ciscoshipped.io/projects/3c4388fb-c825-11e5-b224-0242ac11011b/envs/e6e9e862-ce93-11e5-a821-0242ac11111a/releases?api_token=uWjTGwlfDOtbuiPuDiQchTtljDPHutrb
+TRACE 2016/02/13 22:27:22.697114 client.go:159: Request status code 200 (200 OK)
