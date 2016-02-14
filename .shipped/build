@@ -2,4 +2,6 @@
 
 user=$(whoami)
 sudo chown -R $user:$user .
-mvn clean compile
+mvn clean
+mvn install:install-file -Dfile=./lib/ciscospark-client-1.0-SNAPSHOT.jar -DgroupId=com.ciscospark -DartifactId=ciscospark-client -Dversion=1.0-SNAPSHOT -Dpackaging=jar
+mvn compile
