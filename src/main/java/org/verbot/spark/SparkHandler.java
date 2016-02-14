@@ -20,12 +20,12 @@ public class SparkHandler {
 	private Spark spark = Spark.builder().baseUrl(URI.create("https://api.ciscospark.com/v1")).accessToken(accessToken)
 			.build();
 	
-	private static final String WELCOME = "Lots of Sparks, the room is created on behalf of"
-			+ " %s and for a Good Cause. \n %s wants to Quit Smoke and seeking your help.\n Help/Motivate/Guide %s in quiting..";
+	private static final String WELCOME = "Lots of Sparks from VerBot, this room is created on the behalf of"
+			+ " %s and for a Good Cause. \n%s wants to Quit Smoke and seeking your help. Help, Motivate, or Guide %s in quiting..";
 
-	private static final String WELCOME_COMMUNITY = "%s is another bravo to quit smoking.\n Spark %s share your views, and lastly lets comptete.";
+	private static final String WELCOME_COMMUNITY = "%s is another bravo to start quit smoking.\n So the compitition is going bigger.";
 	
-	private static final String ROOM_LABEL = "* %s * %s Room";
+	private static final String ROOM_LABEL = "%s' Room [Point : %s]";
 	private SparkHandler() {
 	}
 
@@ -118,9 +118,11 @@ public class SparkHandler {
 	public void updatePointsToRoomAndCommunity(final Subject subject)
 	{
 		Room room = new Room();
-		room.setTitle( String.format( ROOM_LABEL, subject.getPoints(), subject.getName()) );
+		room.setTitle( String.format( ROOM_LABEL, subject.getName(), subject.getPoints()) );
 		room.setId( subject.getSparkRoom().getRoomId() );
-		room = spark.rooms().path( "/" + room.getId() ).put( room );		
+		room = spark.rooms().path( "/" + room.getId() ).put( room );
+		
+		sendToCommunity( subject.getName() + " earned points. Total Points : " + subject.getPoints(), subject);
 	}
 	
 	// Method to upgrade user to next Level

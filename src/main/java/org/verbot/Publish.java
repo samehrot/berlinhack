@@ -12,7 +12,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 public class Publish {
 	
 	
-	   public static void main(String[] args) {
+	   public static void main(String args) {
 
 	        String topic        = "/v1/2aa20b73-9362-43a6-97ba-c3730b326283/data";
 	        String content      = "{ \"meaning\" : \"smoke\", \"value\":\"ALARM\"}";
