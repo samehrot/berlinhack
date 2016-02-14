@@ -1,10 +1,9 @@
-package org.verbot;
+package org.verbot.core;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 import org.springframework.scheduling.annotation.Scheduled;
-import org.verbot.core.SmokePatternMonitor;
 import org.verbot.users.UserStore;
 import org.verbot.users.beans.Subject;
 
