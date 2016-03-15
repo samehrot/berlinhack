@@ -15,7 +15,7 @@ public class SparkHandler {
 
 	private static SparkHandler sparkHandler = new SparkHandler();
 
-	private final String accessToken = "ZTZmY2VkNDEtOGUzOS00ZjQ1LWEyMGUtMzFiYjhlOWYxNWZhMDVjYzY3YTEtNjZl";
+	private final String accessToken = "MjQ5YmYxMGMtZjI5Ny00YzdjLWI5ZjEtOTliMTk4ZTg5Zjg1OWZjY2QzZTctN2Zk";
 
 	private Spark spark = Spark.builder().baseUrl(URI.create("https://api.ciscospark.com/v1")).accessToken(accessToken)
 			.build();
@@ -70,7 +70,7 @@ public class SparkHandler {
 	public void onboard(final Subject subject) {
 		System.out.println("Adding " + subject + " to Room with VerBot and Friends");
 		Room room = new Room();
-		room.setTitle(String.format( ROOM_LABEL, subject.getPoints(), subject.getName()));
+		room.setTitle( String.format( ROOM_LABEL, subject.getName(), subject.getPoints()) );
 		room = spark.rooms().post(room);
 		System.out.println(subject.getName() + " room created.. " + room.getId());
 
@@ -97,13 +97,22 @@ public class SparkHandler {
 		// Join him to community.....
 		LevelHandler lH = LevelHandler.instance();
 		Room lR = lH.getRoomForLevel( subject.getLevel() );
-		Membership lM = new Membership();
-		lM.setRoomId( lR.getId() );
-		lM.setPersonEmail( subject.getEmail() );
-		lM = spark.memberships().post( lM );
-		subject.setCommunityMembership( lM );
+		try{
+			Membership lM = new Membership();
+			lM.setRoomId( lR.getId() );
+			lM.setPersonEmail( subject.getEmail() );
+			lM = spark.memberships().post( lM );
+			subject.setCommunityMembership( lM );
+		}
+		catch(Exception ex){
+			ex.printStackTrace();
+			Membership lM = new Membership();
+			lM.setRoomId( lR.getId() );
+			lM.setPersonEmail( subject.getEmail() );
+			subject.setCommunityMembership( lM );
+		}
+		sendToCommunity(String.format( WELCOME_COMMUNITY, subject.getName(), subject.getName()), subject);
 		
-		sendToCommunity(String.format( WELCOME_COMMUNITY, subject.getName(), subject.getName()), subject);		
 	}
 	
 	public void addToCommunityRoom(final Subject subject, final String roomId)

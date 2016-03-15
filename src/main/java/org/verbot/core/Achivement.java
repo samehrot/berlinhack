@@ -21,7 +21,6 @@ public class Achivement implements Runnable{
 		 * Send Tropo call to user with loved one message
 		 * Send SMS to loved one about achivements
 		 */
-		
 		SparkHandler sH = SparkHandler.instance();
 		LevelHandler lH = LevelHandler.instance();
 		Level nL = lH.nextLevel( s.getLevel() );

@@ -33,7 +33,8 @@ public class TropoHandler {
 			webResource.header("content-type","application/json");
 
 			String input = "{\"token\":\"496c664f716f526e694e76636a7547737663575275456e44535774546d69716a596744766f7a6e5171704277\","
-					+ "\"numberToDial\":\"chandan.gupta@sip2sip.info\", \"msg\":\"Hello"+ person.getName() + "You have a voice message. " + msg + " \"}";
+					+ "\"numberToDial\":\""
+					+ person.getPhone() + "\", \"msg\":\"Hello"+ person.getName() + "You have a voice message. " + msg + " \"}";
 
 			ClientResponse response = webResource.type("application/json")
 					.post(ClientResponse.class, input);
